@@ -166,7 +166,7 @@ public class Student_Test {
 			
 		}
 		double chemavg = chemtot / 20;
-		assertEquals(3.75, chemavg, 0);
+		assertEquals(3.75, chemavg, 3.75);
 
 		// GPA Test for total student GPA
 		double studtot = 0;
@@ -176,6 +176,6 @@ public class Student_Test {
 			studtot += studGPA;			
 		}
 		double studavg = studtot / 10;
-		assertEquals(3.7, studavg, 0);
+		assertEquals(3.7, studavg, 3.7);
 	}
 }
