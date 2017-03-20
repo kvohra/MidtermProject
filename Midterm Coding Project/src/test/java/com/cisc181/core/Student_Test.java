@@ -27,7 +27,6 @@ public class Student_Test {
 	static Enrollment e1, e2, e3, e4, e5, e6;
 
 	
-	@SuppressWarnings("deprecation")
 	public static Date studDate(int year, int month, int day){
 		Calendar CalB = Calendar.getInstance();
 		CalB.set(year, month, day);
@@ -142,7 +141,7 @@ public class Student_Test {
 		for (int l = 0; l < ciscGPAList.size(); l++){
 			ciscgpa = ciscGPAList.get(l);
 			cisctot += ciscgpa;
-			return;
+		
 		}
 		double ciscavg = cisctot / 20;
 		assertEquals(3.85, ciscavg, 3.85);
@@ -153,7 +152,7 @@ public class Student_Test {
 		for (int m = 0; m < pillGPAList.size(); m++){
 			pillgpa = pillGPAList.get(m);
 			pilltot += pillgpa;
-			return;
+		
 		}
 		double pillavg = pilltot / 20;
 		assertEquals(3.5, pillavg, 3.5);
@@ -164,10 +163,10 @@ public class Student_Test {
 		for (int n = 0; n < chemGPAList.size(); n++){
 			chemgpa = chemGPAList.get(n);
 			chemtot += chemgpa;
-			return;
+			
 		}
 		double chemavg = chemtot / 20;
-		assertEquals(3.75, chemavg, 3.75);
+		assertEquals(3.75, chemavg, 0);
 
 		// GPA Test for total student GPA
 		double studtot = 0;
@@ -177,6 +176,6 @@ public class Student_Test {
 			studtot += studGPA;			
 		}
 		double studavg = studtot / 10;
-		assertEquals(3.7, studavg, 3.7);
+		assertEquals(3.7, studavg, 0);
 	}
 }
